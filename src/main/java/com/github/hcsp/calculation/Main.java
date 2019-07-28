@@ -15,8 +15,8 @@ public class Main {
      */
     public static String printNumbersInOrder(int a, int b, int c) {
         int Max=Math.max(Math.max(a,b),c);
-        int Min=Math.min(Math.max(a,b),c);
-        int Mid=a >= b ? (a >= c ? (b >= c ? b : c) : a) : (a >= c ? a : (b >= c ? c : b));
+        int Min=Math.min(Math.min(a,b),c);
+        int Mid=a+b+c-Max-Min;
         return String.format("%d>%d>%d", Max, Mid, Min);
     }
 
